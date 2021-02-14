@@ -1,0 +1,18 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+   
+entity comp4bit is
+  Port (A,B: in STD_LOGIC_VECTOR (3 downto 0);
+      gr,eq,sm: out STD_LOGIC);
+      end comp4bit;
+architecture Behavioral of comp4bit is
+
+begin 
+gr <='1' when (A>B)
+else '0';
+eq <='1' when (A=B)
+else '0';
+sm <='1' when (A<B)
+else '0';
+end Behavioral;
